@@ -21,25 +21,27 @@ class _HomePageState extends State<HomePage> {
           child: Center(
             child: Column(
               children: [
-                Column(
-                  children: [
-                    const Text(
-                      "Slack Name: Aderemi Alo",
-                      style: TextStyle(fontSize: 20),
-                    ),
-                    const SizedBox(height: 20),
-                    Image.asset(
-                      "assets/images/profile_picture.png",
-                      width: MediaQuery.of(context).orientation ==
-                              Orientation.portrait
-                          ? MediaQuery.of(context).size.width * 0.5
-                          : MediaQuery.of(context).size.width * 0.25,
-                      height: MediaQuery.of(context).orientation ==
-                              Orientation.portrait
-                          ? MediaQuery.of(context).size.height * 0.5
-                          : MediaQuery.of(context).size.height * 0.25,
-                    )
-                  ],
+                SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const Text(
+                        "Slack Name: Aderemi Alo",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      const SizedBox(height: 20),
+                      Image.asset(
+                        "assets/images/profile_picture.png",
+                        width: MediaQuery.of(context).orientation ==
+                                Orientation.portrait
+                            ? MediaQuery.of(context).size.width * 0.5
+                            : MediaQuery.of(context).size.width * 0.25,
+                        height: MediaQuery.of(context).orientation ==
+                                Orientation.portrait
+                            ? MediaQuery.of(context).size.height * 0.5
+                            : MediaQuery.of(context).size.height * 0.25,
+                      )
+                    ],
+                  ),
                 ),
                 ElevatedButton(
                   style: ButtonStyle(
